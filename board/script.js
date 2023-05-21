@@ -13,10 +13,28 @@ const createSquare = () => {
 		const square = document.createElement('div')
 		square.classList.add('square')
 
+		square.addEventListener('mouseover', () => setColor(square))
+		square.addEventListener('mouseout', () => removeColor(square))
 
-        box.appendChild(square)
-
+		box.appendChild(square)
 	}
+}
+
+const setColor = square => {
+	let h
+	if (range === 360) {
+		h = Math.floor(Math.random() * 360)
+	} else {
+		h = Math.floor(Math.random() * 60) + range
+	}
+
+	const s = slider.value + '%'
+	const l = '50%'
+
+	square.style.backgroundColor = `hsl(${h},${l},${s})`
+}
+const removeColor = square => {
+	square.style.backgroundColor = 'transparent'
 }
 
 createSquare()
