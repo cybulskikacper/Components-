@@ -11,6 +11,8 @@ body {
 	height: 100vh;
 	font-family: 'Montserrat', sans-serif;
 	background-color: #333;
+
+	flex-direction: column;
 }
 
 h2 {
@@ -37,10 +39,10 @@ h2 {
 	text-transform: uppercase;
 	border: 1px solid #fff;
 	color: #fff;
-	background: none;
 	border-radius: 6px;
-	transition: color 0.3s, background-color 0.3s;
+	background: none;
 	cursor: pointer;
+	transition: color 0.3s, background-color 0.3s;
 }
 
 .btn:hover {
@@ -48,11 +50,12 @@ h2 {
 	background-color: #fff;
 }
 
-.slide-box {
+.slider-box {
 	margin-bottom: 2em;
 	color: #fff;
-	flex: 18px;
+	font-size: 18px;
 }
+
 #slider {
 	margin-bottom: 0.5em;
 	width: 400px;
@@ -63,14 +66,15 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	width: 1000px;
 }
+
 .square {
 	margin: 3px;
 	height: 32px;
 	width: 32px;
 	border: 1px solid #000;
 	border-radius: 6px;
-	width: 1000px;
 	transition-property: background-color;
 	transition-duration: 3s;
 }
