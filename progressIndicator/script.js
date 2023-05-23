@@ -5,3 +5,11 @@ const prevBtn = document.querySelector('.btn-prev')
 const nextBtn = document.querySelector('.btn-next')
 
 let currentStep = 1
+
+const handleNextBtn = () => {
+	currentStep++
+}
+const handlePrevtBtn = () => {
+	currentStep--
+}
+
