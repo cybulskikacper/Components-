@@ -4,3 +4,7 @@ const accordionBtns = document.querySelectorAll('.accordion-btn')
 function yes () { 
     
 }
+
+function no () {
+    
+}
