@@ -9,9 +9,23 @@ function openAccordionItems() {
 
 
 
+
 }
 
 
 
+function openAccordion() {
+
+
+
+    console.log(this);
+
+
+
+}
+
+
 
 accordionBtns.addEventListener('click', openAccordionItems)
+
+accordion.addEventListener('click', openAccordion)
