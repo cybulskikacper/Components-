@@ -1,30 +1,9 @@
 const accordion = document.querySelector('.accordion')
 const accordionBtns = document.querySelectorAll('.accordion-btn')
 
-function openAccordionItems() {
+function openAccordionItems() {}
 
-
-
-    console.log(this);
-
-
-
-
-}
-
-
-
-function openAccordion() {
-
-
-
-    console.log(this);
-
-
-
-}
-
-
+function openAccordion() {}
 
 accordionBtns.addEventListener('click', openAccordionItems)
 
