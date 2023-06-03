@@ -1,10 +1,34 @@
 const accordion = document.querySelector('.accordion')
 const accordionBtns = document.querySelectorAll('.accordion-btn')
 
-function openAccordionItems() {}
+function openAccordionItems() {
+	if (this.nextElementSibling.classList.contains('active')) {
+		this.nextElementSibling.classList.remove('active')
+	} else {
+		closeAccordionItems()
+		console.log(this.nextElementSibling.classList.toggle('active'))
+	}
+}
 
-function openAccordion() {}
+const closeAccordionItems = () => {
+	const allActiveItems = document.querySelectorAll('.accordion-info')
+	allActiveItems.forEach(item => item.classList.remove('active'))
+}
 
-accordionBtns.addEventListener('click', openAccordionItems)
+const clickOutsideArea = e => {
+	if     
+    (
+        e.target.classList.contains('accordion-btn') || 
+        e.target.classList.contains('accordion-info') || 
+        e.target.classList.contains('accordion-info-text')
+        
+        
+        
+        )    
+    return
 
-accordion.addEventListener('click', openAccordion)
+	closeAccordionItems()
+}
+
+accordionBtns.forEach(btn => btn.addEventListener('click', openAccordionItems))
+window.addEventListener('click', clickOutsideArea)
