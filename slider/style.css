@@ -5,7 +5,7 @@
 }
 
 body {
-	display: grid;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
@@ -57,6 +57,6 @@ body {
 	transition: transform;
 }
 
-.btn:hover span {
+.btn:hover span { 
 	transform: scale(0.7);
 }
