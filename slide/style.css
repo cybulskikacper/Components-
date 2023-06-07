@@ -154,13 +154,9 @@ body {
 	animation: show-text 1s 0.2s forwards;
 }
 
-
-.card.active::after { 
-
+.card.active::after {
 	opacity: 0;
 }
-
-
 
 @keyframes show-bg {
 	to {
