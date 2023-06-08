@@ -10,76 +10,56 @@ body {
 	align-items: center;
 	height: 100vh;
 	font-family: 'Montserrat', sans-serif;
-	background-color: #333;
+	background-color: #5bca5b;
+	flex-direction: column;
 }
 
-.nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	max-width: 1000px;
-	background-color: royalblue;
-}
-
-.nav-items {
-	display: flex;
-	margin: 0 30px;
-}
-
-.nav-items a {
-	padding: 2em 1em;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #fff;
-	transition: background-color 0.3s, color 0.3s;
-}
-.nav-items a:hover {
-	background-color: #fff;
-	color: royalblue;
-}
-
-.search-box {
-	position: relative;
-	align-self: stretch;
-}
-
-.search-input {
-	padding: 2em;
-	width: 300px;
-	background-color: #eee;
+.btn {
+	padding: 0.5em 1em;
+	font-size: 1.6rem;
 	border: none;
-	color: #333;
-	font-size: 16px;
-	transform: translateX(-80px) scaleX(0);
-	transform-origin: right;
-	transition: transform 0.3s;
-}
-
-.search-btn {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 80px;
-	border: none;
-	background-color: #3651aa;
+	border-radius: 6px;
+	background-color: #e5e5e5;
 	cursor: pointer;
 }
 
-.search-btn:focus,
-.search-input:focus {
-	outline: none;
+p {
+	font-size: 3rem;
+	color: #fff;
 }
 
-.search-btn:focus {
-	background-color: #203886;
+.modal-btn {
+	position: absolute;
+	top: 200px;
 }
 
-.search-input:focus {
-	background-color: #ddd;
+.modal {
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	top: 200px;
+	padding: 2em;
+	width: 600px;
+	height: 200px;
+	background-color: #fff;
+	border-radius: 6px;
+}
+
+.modal-input {
+	padding: 1em;
+	width: 100%;
+	font-size: 1rem;
+	border-radius: 6px;
+}
+
+.error-msg {
+	margin: 1em 0;
+	font-size: 1rem;
+	color: tomato;
 }
 
 .active {
-	transform: translateX(-80px) scaleX(1);
+	display: flex;
 }
