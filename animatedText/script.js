@@ -10,4 +10,38 @@ let timeout
 let index = 1
 let speed = 80
 
-const writtingAnimation = () => {}
+const writtingAnimation = () => {
+	text.innerHTML = inputValue.slice(0, index)
+
+	index++
+
+	if (index > inputValue.length) return
+
+	timeout = setTimeout(writtingAnimation, speed)
+}
+
+const showModal = () => {
+	modal.classList.add('active')
+}
+
+const closeModal = () => {
+	if (input.value == '') {
+		errorMsg.textContent = 'Wprowadź tekst.'
+		return
+	}
+
+	inputValue = input.value
+	modal.classList.remove('active')
+	clearStuff()
+	writtingAnimation()
+}
+
+const clearStuff = () => {
+	index = 1
+	clearTimeout(timeout)
+	input.value = ''
+	errorMsg.textContent = ''
+}
+
+modalBtn.addEventListener('click', showModal)
+saveBtn.addEventListener('click', closeModal)
