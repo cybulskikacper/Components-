@@ -1,0 +1,33 @@
+const counterItems = document.querySelectorAll('.counter')
+const counterBox = document.querySelector('.counter-box')
+
+const options = {
+	rootMargin: '-250px',
+}
+
+const startCounter = entry => {
+	console.log(entry[0].isIntersecting)
+
+	if (entry[0].isIntersecting) {
+		counterItems.forEach(counter => {
+			const upadateCounter = () => {
+				const finalNumber = counter.getAttribute('data-number')
+				const value = parseInt(counter.textContent)
+
+				const speed = finalNumber / 300
+
+				if (value < finalNumber) {
+					counter.textContent = `${Math.floor(value + speed)}`
+					setTimeout(upadateCounter, 1)
+				} else {
+					counter.textContent = finalNumber
+				}
+			}
+
+			upadateCounter()
+		})
+	}
+}
+
+const observer = new IntersectionObserver(startCounter, options)
+observer.observe(counterBox)
